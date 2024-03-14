@@ -24,3 +24,9 @@ export const getCommentsOnArticle = (article_id) => {
         return response.data.comments;
     })
 }
+
+export const patchVoteOnArticle = (article_id, voteAmount) => {
+    return newsApi.patch(`/articles/${article_id}`, {inc_votes: voteAmount}).then((response) => {
+        return response.data.updated_article.votes
+    })
+}
