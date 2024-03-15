@@ -18,7 +18,7 @@ const ArticlePage = () => {
             setVoteCount((currVotes) => {
                 return currVotes + voteAmount
             })
-            patchVoteOnArticle(article_id ,voteAmount).catch((err) => {
+            return patchVoteOnArticle(article_id ,voteAmount).catch((err) => {
                 setVoteCount((currVotes) => {
                     return currVotes - voteAmount
                 })

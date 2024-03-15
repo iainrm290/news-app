@@ -2,6 +2,7 @@ import { useParams} from 'react-router-dom'
 import { useEffect, useState } from "react"
 import { getCommentsOnArticle, getArticleById } from './utils/api'
 import CommentCard from './CommentCard'
+import PostComment from './PostComment'
 
 const CommentsPage = () => {
     const {article_id} = useParams()
@@ -25,6 +26,7 @@ const CommentsPage = () => {
                 <h2>{specificArticle.title}</h2>
                 <p>{specificArticle.body}</p>
                 <h3>Comments</h3>
+                <PostComment article_id={article_id} setCommentsOnArticle={setCommentsOnArticle}/>
                 
                 <ul>
                     {commentsOnArticle.map((comment) => {

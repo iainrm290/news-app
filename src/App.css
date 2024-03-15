@@ -2,3 +2,9 @@ img {
     width: 300px;
     display: flex;
 }
+
+textarea {
+    margin-left: 20px;
+    padding: 5px;
+    width: 200px
+}
