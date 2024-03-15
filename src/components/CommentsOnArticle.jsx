@@ -30,8 +30,8 @@ const CommentsPage = () => {
                 
                 <ul>
                     {commentsOnArticle.map((comment) => {
-                        return <li key={comment.comment_id}>
-                            <CommentCard comment={comment} />
+                        return <li key={comment.created_at}>
+                            <CommentCard comment={comment} setCommentsOnArticle={setCommentsOnArticle} />
                         </li>
                     })}
                 </ul>
