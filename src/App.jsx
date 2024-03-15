@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Articles from './components/Articles'
 import ArticlePage from './components/ArticlePage'
 import CommentsPage from './components/CommentsOnArticle'
+import Topics from './components/Topics'
 import './App.css'
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
             <Route path='/articles' element={<Articles />} />
             <Route path='/articles/:article_id' element={<ArticlePage />}/>
             <Route path='/articles/:article_id/comments' element={<CommentsPage />}/>
+            <Route path='/topics' element={<Topics />}/>
+
         </Routes>
             
         </>
